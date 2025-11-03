@@ -25,6 +25,10 @@
     line-height: 1;
   }
 
+  .header__logo {
+    letter-spacing: 0.2rem;
+  }
+
   .header__wrapper {
     display: flex;
     justify-content: space-between;
@@ -49,6 +53,20 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: $color-main;
+    display: flex;
+    flex-direction: column;
+    font-size: 55px;
+    line-height: 1.1;
+    font-weight: $font-bold;
+    letter-spacing: 0.3rem;
+  }
+
+  .header__hero-line {
+    display: block;
+    width: 10rem;
+    height: 0.3rem;
+    background-color: $color-main;
+    margin: 1rem auto 0;
   }
 
   .header__discover {
@@ -57,10 +75,19 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    .header__discover-subtext {
+      letter-spacing: 0.3rem;
+      font-size: 25px;
+    }
+    .icon-arrow-down {
+      font-size: 2rem;
+    }
   }
 }
 
 .header__nav a {
   text-decoration: none;
-  color: $color-light;
+  color: $color-grey;
 }
