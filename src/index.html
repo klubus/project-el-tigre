@@ -21,11 +21,11 @@
             <h1 class="header__title">EL TIGRE</h1>
             <h4 class="header__subtitle">VENEZUELA COFFEE BEANS</h4>
           </div>
-          <div class="header__nav">
+          <nav class="header__nav">
             <a href="#home" class="header__link">HOME</a>
             <a href="#products" class="header__link">PRODUCTS</a>
             <a href="#contact" class="header__link">CONTACT</a>
-          </div>
+          </nav>
         </div>
       </div>
       <div class="header__hero">
@@ -41,8 +41,10 @@
       </div>
     </header>
 
-    <div class="products"><br /><br /><br /></div>
-    <div class="about-us">
+    <section class="products">
+      <div id="product-list"></div>
+    </section>
+    <section class="about-us">
       <div class="about-us__wrapper">
         <div class="about-us__header">
           <span class="about-us__main-text">ABOUT US</span>
@@ -61,11 +63,19 @@
         </div>
         <span class="about-us__join-us">Join us!</span>
       </div>
-    </div>
+    </section>
 
     <footer>
-      <p>2021 EL TIGRE Inc.</p>
+      <small>2021 EL TIGRE Inc.</small>
     </footer>
+    <script id="template-menu-product" type="text/x-handlebars-template">
+      <section class='product'>
+        <header class='product__header'>
+          <h3 class='product__name no-spacing'>{{name}}</h3>
+        </header>
+      </section>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
     <script type="module" src="js/app.js"></script>
   </body>
 </html>
