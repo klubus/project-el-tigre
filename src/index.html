@@ -42,7 +42,13 @@
     </header>
 
     <section class="products">
-      <div id="product-list"></div>
+      <div class="products__wrapper">
+        <header class="product__header">
+          <p>PRODUCTS</p>
+          <span class="product__header-line"></span>
+        </header>
+        <div id="product-list"></div>
+      </div>
     </section>
     <section class="about-us">
       <div class="about-us__wrapper">
@@ -70,9 +76,20 @@
     </footer>
     <script id="template-menu-product" type="text/x-handlebars-template">
       <section class='product'>
-        <header class='product__header'>
-          <h3 class='product__name no-spacing'>{{name}}</h3>
-        </header>
+        <div class='product__description'>
+          <h3 class='product__name no-spacing'>0{{id}}. {{title}}</h3>
+          <div class='product__description-inside'>
+            <span class='product__description-line'></span>
+            <p>{{description}}</p>
+          </div>
+          <div class='product__measurements'>
+            <span>ROASTING: <span class="product__measurements-value">{{roasting}}/10</span></span>
+            <span>INTENSITY: <span class="product__measurements-value">{{intensity}}/10</span></span>
+          </div>
+        </div>
+        <div class='product__image'>
+          <img src='{{image}}' alt='{{title}}' />
+        </div>
       </section>
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
