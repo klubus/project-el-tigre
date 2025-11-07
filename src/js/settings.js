@@ -4,7 +4,15 @@ export const select = {
   },
   containerOf: {
     menu: '#product-list',
+    pages: '#pages',
   },
+  nav: {
+    links: '.header__nav a',
+  },
+};
+
+export const classNames = {
+  active: 'active',
 };
 
 export const settings = {

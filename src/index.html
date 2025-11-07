@@ -41,15 +41,24 @@
       </div>
     </header>
 
-    <section class="products">
-      <div class="products__wrapper">
-        <header class="product__header">
-          <p>PRODUCTS</p>
-          <span class="product__header-line"></span>
-        </header>
-        <div id="product-list"></div>
-      </div>
-    </section>
+    <div id="pages">
+      <section id="home">
+        <div class="home-wrapper container"></div>
+      </section>
+      <section id="products" class="products">
+        <div class="products__wrapper">
+          <header class="product__header">
+            <p>PRODUCTS</p>
+            <span class="product__header-line"></span>
+          </header>
+          <div id="product-list"></div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="contact-wrapper container"></div>
+      </section>
+    </div>
+
     <section class="about-us">
       <div class="about-us__wrapper">
         <div class="about-us__header">
@@ -83,8 +92,14 @@
             <p>{{description}}</p>
           </div>
           <div class='product__measurements'>
-            <span>ROASTING: <span class="product__measurements-value">{{roasting}}/10</span></span>
-            <span>INTENSITY: <span class="product__measurements-value">{{intensity}}/10</span></span>
+            <span>ROASTING:
+              <span
+                class='product__measurements-value'
+              >{{roasting}}/10</span></span>
+            <span>INTENSITY:
+              <span
+                class='product__measurements-value'
+              >{{intensity}}/10</span></span>
           </div>
         </div>
         <div class='product__image'>

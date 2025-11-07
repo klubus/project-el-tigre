@@ -4,6 +4,16 @@
   padding: 0 20px;
 }
 
+#pages {
+  > * {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+
 .page {
   padding: 20px 20px;
 }
