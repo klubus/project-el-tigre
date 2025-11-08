@@ -1,10 +1,13 @@
 export const select = {
   templateOf: {
     menuProduct: '#template-menu-product',
+    aboutUs: '#template-about-us',
   },
   containerOf: {
     menu: '#product-list',
+    home: 'product-list-home',
     pages: '#pages',
+    aboutUs: '.about-us-wrapper',
   },
   nav: {
     links: '.header__nav a',
@@ -28,5 +31,8 @@ export const settings = {
 export const templates = {
   menuProduct: Handlebars.compile(
     document.querySelector(select.templateOf.menuProduct).innerHTML
+  ),
+  aboutUs: Handlebars.compile(
+    document.querySelector(select.templateOf.aboutUs).innerHTML
   ),
 };

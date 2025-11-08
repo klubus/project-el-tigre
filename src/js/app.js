@@ -1,5 +1,6 @@
 import { classNames, select, settings } from './settings.js';
 import Product from './components/Product.js';
+import AboutUs from './components/AboutUs.js';
 
 const app = {
   initData: function () {
@@ -23,6 +24,10 @@ const app = {
         thisApp.data.products[productData]
       );
     }
+  },
+
+  initAboutUs: function () {
+    new AboutUs();
   },
 
   initPages: function () {
@@ -58,11 +63,6 @@ const app = {
     const thisApp = this;
 
     for (let page of thisApp.pages) {
-      //   if (page.id == pageId) {
-      //     page.classList.add(classNames.active);
-      //   } else {
-      //     page.classList.remove(classNames.active);
-      //   } TO SAMO ZASTOSOWANIE:
       page.classList.toggle(classNames.active, page.id == pageId);
     }
 
@@ -78,6 +78,7 @@ const app = {
     const thisApp = this;
     thisApp.initPages();
     thisApp.initData();
+    thisApp.initAboutUs();
   },
 };
 

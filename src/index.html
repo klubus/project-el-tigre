@@ -43,10 +43,18 @@
 
     <div id="pages">
       <section id="home">
-        <div class="home-wrapper container"></div>
+        <div class="home-wrapper"></div>
+        <div class="products__wrapper container">
+          <header class="product__header">
+            <p>PRODUCTS</p>
+            <span class="product__header-line"></span>
+          </header>
+          <div id="product-list"></div>
+        </div>
+        <div class="about-us-wrapper"></div>
       </section>
       <section id="products" class="products">
-        <div class="products__wrapper">
+        <div class="products__wrapper container">
           <header class="product__header">
             <p>PRODUCTS</p>
             <span class="product__header-line"></span>
@@ -59,29 +67,8 @@
       </section>
     </div>
 
-    <section class="about-us">
-      <div class="about-us__wrapper">
-        <div class="about-us__header">
-          <span class="about-us__main-text">ABOUT US</span>
-          <span class="about-us__line"></span>
-        </div>
-        <div class="about-us__information">
-          <p>
-            Who are we? Just a bunch of friend with <br />
-            a love for a good coffee and desire to create <br />
-            something new, something original.
-          </p>
-          <p>
-            Our coffees reflect us - young, wild and free.<br />
-            We are on the journey of new tastes...
-          </p>
-        </div>
-        <span class="about-us__join-us">Join us!</span>
-      </div>
-    </section>
-
     <footer>
-      <small>2021 EL TIGRE Inc.</small>
+      <small>&copy; 2021 EL TIGRE Inc.</small>
     </footer>
     <script id="template-menu-product" type="text/x-handlebars-template">
       <section class='product'>
@@ -104,6 +91,30 @@
         </div>
         <div class='product__image'>
           <img src='{{image}}' alt='{{title}}' />
+        </div>
+      </section>
+    </script>
+    <script id="template-about-us" type="text/x-handlebars-template">
+      <section class='about-us'>
+        <div class='about-us__wrapper'>
+          <div class='about-us__header'>
+            <span class='about-us__main-text'>ABOUT US</span>
+            <span class='about-us__line'></span>
+          </div>
+          <div class='about-us__information'>
+            <p>
+              Who are we? Just a bunch of friend with
+              <br />
+              a love for a good coffee and desire to create
+              <br />
+              something new, something original.
+            </p>
+            <p>
+              Our coffees reflect us - young, wild and free.<br />
+              We are on the journey of new tastes...
+            </p>
+          </div>
+          <span class='about-us__join-us'>Join us!</span>
         </div>
       </section>
     </script>

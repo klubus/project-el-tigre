@@ -16,9 +16,11 @@ class Product {
 
     thisProduct.element = utils.createDOMFromHTML(generatedHTML);
 
-    const menuContainer = document.querySelector(select.containerOf.menu);
+    const menuContainers = document.querySelectorAll(select.containerOf.menu);
 
-    menuContainer.appendChild(thisProduct.element);
+    menuContainers.forEach((container) => {
+      container.appendChild(thisProduct.element.cloneNode(true));
+    });
   }
 }
 
