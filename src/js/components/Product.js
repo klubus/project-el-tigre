@@ -6,10 +6,10 @@ class Product {
     const thisProduct = this;
     thisProduct.id = id;
     thisProduct.data = data;
-    thisProduct.renderInHomePage();
+    thisProduct.render();
   }
 
-  renderInHomePage() {
+  render() {
     const thisProduct = this;
 
     const generatedHTML = templates.menuProduct(thisProduct.data);

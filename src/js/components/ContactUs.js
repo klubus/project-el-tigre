@@ -2,8 +2,9 @@ import { templates, select } from '../settings.js';
 import { utils } from '../utils.js';
 
 class ContactUs {
-  constructor() {
+  constructor(data = {}) {
     const thisContactUs = this;
+    thisContactUs.data = data;
     thisContactUs.render();
   }
 

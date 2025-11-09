@@ -33,7 +33,7 @@
           >HOME OF <br />
           ORIGINAL TASTES</span
         >
-        <span class="header__hero-line"></span>
+        <span class="line"></span>
       </div>
       <div class="header__discover">
         <span class="header__discover-subtext">DISCOVER</span>
@@ -43,27 +43,27 @@
 
     <div id="pages">
       <section id="home">
-        <div class="home-wrapper"></div>
+        <div class="home__wrapper"></div>
         <div class="products__wrapper container">
           <header class="product__header">
             <p>PRODUCTS</p>
-            <span class="product__header-line"></span>
+            <span class="line"></span>
           </header>
-          <div id="product-list"></div>
+          <div class="product-list"></div>
         </div>
-        <div class="about-us-wrapper"></div>
+        <div class="home__about-us-container"></div>
       </section>
       <section id="products" class="products">
         <div class="products__wrapper container">
           <header class="product__header">
             <p>PRODUCTS</p>
-            <span class="product__header-line"></span>
+            <span class="line"></span>
           </header>
-          <div id="product-list"></div>
+          <div class="product-list"></div>
         </div>
       </section>
       <section id="contact">
-        <div class="contact-us-wrapper"></div>
+        <div class="contact-us__wrapper"></div>
       </section>
     </div>
 
@@ -71,7 +71,7 @@
       <small>&copy; 2021 EL TIGRE Inc.</small>
     </footer>
     <script id="template-menu-product" type="text/x-handlebars-template">
-      <section class='product'>
+      <article class='product'>
         <div class='product__description'>
           <h3 class='product__name no-spacing'>0{{id}}. {{title}}</h3>
           <div class='product__description-inside'>
@@ -92,14 +92,14 @@
         <div class='product__image'>
           <img src='{{image}}' alt='{{title}}' />
         </div>
-      </section>
+      </article>
     </script>
     <script id="template-about-us" type="text/x-handlebars-template">
-      <section class='about-us'>
+      <article class='about-us'>
         <div class='about-us__wrapper'>
           <div class='about-us__header'>
-            <span class='about-us__main-text'>ABOUT US</span>
-            <span class='about-us__line'></span>
+            <span>ABOUT US</span>
+            <span class='line'></span>
           </div>
           <div class='about-us__information'>
             <p>
@@ -116,27 +116,27 @@
           </div>
           <span class='about-us__join-us'>Join us!</span>
         </div>
-      </section>
+      </article>
     </script>
     <script id="template-contact-us" type="text/x-handlebars-template">
-      <section class='contact-us container'>
-        <div class='contact-us__wrapper'>
-          <div class='contact-us__header'>
-            <span class='about-us__main-text'>CONTACT US</span>
-            <span class='about-us__line'></span>
+        <article class='contact-us container'>
+          <div class='contact-us__wrapper'>
+            <div class='contact-us__header'>
+              <span>CONTACT US</span>
+              <span class='line'></span>
+            </div>
+            <div class='contact-us__form'>
+              <form>
+                  <label for="name">NAME</label>
+                  <input type="text" id="name" name="name">
+                  <label for="title">TITLE</label>
+                  <input type="text" id="title" name="title">
+                  <label for="message">MESSAGE</label>
+                  <textarea id="message" name="message"></textarea>
+                  <button type="submit" id="submit">Submit</button>
+                </form>
           </div>
-          <div class='contact-us__form'>
-            <form>
-                <label for="name">NAME</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="title">TITLE</label><br>
-                <input type="text" id="title" name="title"><br>
-                <label for="message">MESSAGE</label><br>
-                <textarea type="textarea" id="message" name="message"></textarea><br>
-                <input type="submit" id="submit" value="Submit">
-              </form>
-        </div>
-      </section>
+      </article>
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
     <script type="module" src="js/app.js"></script>

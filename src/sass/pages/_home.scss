@@ -1,14 +1,8 @@
 .about-us {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../images/about-us.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
+  @include section-bg('../images/background.png');
   min-height: 60svh;
   color: $color-light;
   padding-top: 2rem;
-  position: relative;
 }
 
 .about-us__wrapper {
@@ -17,39 +11,26 @@
 }
 
 .about-us__header {
-  display: flex;
-  flex-direction: column;
+  @include flex(column, center, center);
   color: $color-main;
-  justify-content: center;
-  align-items: center;
-  font-size: 55px;
+  font-size: $font-size-xlg;
   line-height: 1.1;
   font-weight: $font-bold;
-  letter-spacing: 0.3rem;
+  letter-spacing: $letter-spacing-lg;
 }
 
 .about-us__information {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex(column, center, center);
   font-style: italic;
-  font-size: 20px;
+  font-size: $font-size-md;
 }
 
 .about-us__join-us {
-  display: flex;
-  justify-content: flex-end;
+  @include flex(row, flex-end, center);
   max-width: 600px;
   padding-right: 3rem;
   font-style: italic;
-  font-size: 20px;
+  font-size: $font-size-md;
 }
 
-.about-us__line {
-  display: block;
-  width: 20rem;
-  height: 0.3rem;
-  background-color: $color-main;
-  margin: 1rem auto 0;
-}
+

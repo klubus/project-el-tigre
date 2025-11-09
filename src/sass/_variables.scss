@@ -7,3 +7,30 @@ $font-light: 300;
 $font-normal: 400;
 $font-semibold: 500;
 $font-bold: 700;
+$font-family: 'Source Sans 3', sans-serif;
+$font-size-xlg: 3.5rem;
+$font-size-lg: 2rem;
+$font-size-md: 1.25rem;
+$font-size-normal: 1rem;
+
+$letter-spacing-md: 0.2rem;
+$letter-spacing-lg: 0.3rem;
+
+@mixin flex($direction: row, $justify: center, $align: center, $gap: null) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    @if $gap != null {
+      gap: $gap;
+    }
+  }
+
+  @mixin section-bg($image, $overlay: rgba(0, 0, 0, 0.6)) {
+    background: linear-gradient($overlay, $overlay), url($image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+  }

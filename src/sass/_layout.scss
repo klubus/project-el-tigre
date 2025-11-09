@@ -19,15 +19,9 @@
 }
 
 .header {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../images/background.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
+  @include section-bg('../images/background.png');
   min-height: 90svh;
   color: $color-light;
-  position: relative;
 
   h1 {
     margin: 0;
@@ -35,12 +29,11 @@
   }
 
   .header__logo {
-    letter-spacing: 0.2rem;
+    letter-spacing: $letter-spacing-md;
   }
 
   .header__wrapper {
-    display: flex;
-    justify-content: space-between;
+    @include flex(row, space-between);
     max-width: 800px;
     margin: 0 auto;
     padding-top: 2rem;
@@ -57,18 +50,16 @@
   }
 
   .header__hero {
+    @include flex(column, center, center);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
     color: $color-main;
-    display: flex;
-    flex-direction: column;
-    font-size: 55px;
+    font-size: $font-size-xlg;
     line-height: 1.1;
     font-weight: $font-bold;
-    letter-spacing: 0.3rem;
+    letter-spacing: $letter-spacing-lg;
   }
 
   .header__hero-line {
@@ -80,21 +71,19 @@
   }
 
   .header__discover {
+    @include flex(column, center, center);
     position: absolute;
     bottom: 2rem;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
 
     .header__discover-subtext {
-      letter-spacing: 0.3rem;
-      font-size: 25px;
+      letter-spacing: $letter-spacing-lg;
+      font-size: 1.5rem;
     }
 
     .icon-arrow-down {
-      font-size: 2rem;
+      font-size: $font-size-lg;
     }
   }
 }
@@ -104,8 +93,15 @@
   color: $color-grey;
 }
 
+.line {
+  display: block;
+  width: 20rem;
+  height: 0.3rem;
+  background-color: $color-main;
+  margin: 1rem auto 0;
+}
+
 footer {
-  display: flex;
-  justify-content: center;
+  @include flex(column, center, center);
   padding: 1.3rem;
 }
