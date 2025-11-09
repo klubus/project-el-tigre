@@ -15,6 +15,7 @@ $font-size-normal: 1rem;
 
 $letter-spacing-md: 0.2rem;
 $letter-spacing-lg: 0.3rem;
+$letter-spacing-xlg: 0.7rem;
 
 @mixin flex($direction: row, $justify: center, $align: center, $gap: null) {
     display: flex;

@@ -29,11 +29,6 @@
         </div>
       </div>
       <div class="header__hero">
-        <span class="header__hero-main"
-          >HOME OF <br />
-          ORIGINAL TASTES</span
-        >
-        <span class="line"></span>
       </div>
       <div class="header__discover">
         <span class="header__discover-subtext">DISCOVER</span>
@@ -70,6 +65,10 @@
     <footer>
       <small>&copy; 2021 EL TIGRE Inc.</small>
     </footer>
+    <script id="template-main-text" type="text/x-handlebars-template">
+        <span class="header__hero-main">{{breakLine mainText}}</span>
+        <span class="line"></span>
+    </script>
     <script id="template-menu-product" type="text/x-handlebars-template">
       <article class='product'>
         <div class='product__description'>

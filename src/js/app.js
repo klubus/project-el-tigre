@@ -2,18 +2,24 @@ import { classNames, select, settings } from './settings.js';
 import Product from './components/Product.js';
 import AboutUs from './components/AboutUs.js';
 import ContactUs from './components/ContactUs.js';
+import HeroSection from './components/HeroSection.js';
 
 const app = {
   initData: function () {
-    const url = settings.db.url + '/' + settings.db.products;
+    const thisApp = this;
+    const urlProducts = settings.db.url + '/' + settings.db.products;
+    const urlMainText = settings.db.url + '/' + settings.db.mainText;
     this.data = {};
-    fetch(url)
-      .then((rawResponse) => {
-        return rawResponse.json();
+    Promise.all([fetch(urlProducts), fetch(urlMainText)])
+      .then(function (responses) {
+        return Promise.all(responses.map((r) => r.json()));
       })
-      .then((parsedResponse) => {
-        this.data.products = parsedResponse;
-        this.initProducts();
+      .then(function ([products, mainText]) {
+        thisApp.data.products = products;
+        thisApp.data.mainText = mainText;
+
+        thisApp.initProducts();
+        thisApp.initHeroSection();
       });
   },
 
@@ -35,6 +41,13 @@ const app = {
     new ContactUs();
   },
 
+  initHeroSection: function () {
+    const thisApp = this;
+    const randomDigit = Math.floor(Math.random() * 3);
+    new HeroSection(thisApp.data.mainText[randomDigit].id, {
+      mainText: thisApp.data.mainText[randomDigit].text,
+    });
+  },
   initPages: function () {
     const thisApp = this;
     thisApp.pages = document.querySelector(select.containerOf.pages).children;

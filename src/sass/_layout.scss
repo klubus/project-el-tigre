@@ -59,7 +59,7 @@
     font-size: $font-size-xlg;
     line-height: 1.1;
     font-weight: $font-bold;
-    letter-spacing: $letter-spacing-lg;
+    letter-spacing: $letter-spacing-xlg;
   }
 
   .header__hero-line {
@@ -68,6 +68,10 @@
     height: 0.3rem;
     background-color: $color-main;
     margin: 1rem auto 0;
+  }
+
+  .header__hero-main {
+    text-transform: uppercase;
   }
 
   .header__discover {
