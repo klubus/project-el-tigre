@@ -1,6 +1,7 @@
 import { classNames, select, settings } from './settings.js';
 import Product from './components/Product.js';
 import AboutUs from './components/AboutUs.js';
+import ContactUs from './components/ContactUs.js';
 
 const app = {
   initData: function () {
@@ -28,6 +29,10 @@ const app = {
 
   initAboutUs: function () {
     new AboutUs();
+  },
+
+  initContactUs: function () {
+    new ContactUs();
   },
 
   initPages: function () {
@@ -79,6 +84,7 @@ const app = {
     thisApp.initPages();
     thisApp.initData();
     thisApp.initAboutUs();
+    thisApp.initContactUs();
   },
 };
 

@@ -1,0 +1,25 @@
+import { templates, select } from '../settings.js';
+import { utils } from '../utils.js';
+
+class ContactUs {
+  constructor() {
+    const thisContactUs = this;
+    thisContactUs.render();
+  }
+
+  render() {
+    const thisContactUs = this;
+
+    const generatedHTML = templates.contactUs(thisContactUs.data);
+
+    thisContactUs.element = utils.createDOMFromHTML(generatedHTML);
+
+    const contactUsContainer = document.querySelector(
+      select.containerOf.contactUs
+    );
+
+    contactUsContainer.appendChild(thisContactUs.element);
+  }
+}
+
+export default ContactUs;

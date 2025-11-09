@@ -63,7 +63,7 @@
         </div>
       </section>
       <section id="contact">
-        <div class="contact-wrapper container"></div>
+        <div class="contact-us-wrapper"></div>
       </section>
     </div>
 
@@ -115,6 +115,26 @@
             </p>
           </div>
           <span class='about-us__join-us'>Join us!</span>
+        </div>
+      </section>
+    </script>
+    <script id="template-contact-us" type="text/x-handlebars-template">
+      <section class='contact-us container'>
+        <div class='contact-us__wrapper'>
+          <div class='contact-us__header'>
+            <span class='about-us__main-text'>CONTACT US</span>
+            <span class='about-us__line'></span>
+          </div>
+          <div class='contact-us__form'>
+            <form>
+                <label for="name">NAME</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="title">TITLE</label><br>
+                <input type="text" id="title" name="title"><br>
+                <label for="message">MESSAGE</label><br>
+                <textarea type="textarea" id="message" name="message"></textarea><br>
+                <input type="submit" id="submit" value="Submit">
+              </form>
         </div>
       </section>
     </script>

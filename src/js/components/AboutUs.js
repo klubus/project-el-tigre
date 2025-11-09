@@ -8,15 +8,15 @@ class AboutUs {
   }
 
   render() {
-    const thisProduct = this;
+    const thisAboutUs = this;
 
-    const generatedHTML = templates.aboutUs(thisProduct.data);
+    const generatedHTML = templates.aboutUs(thisAboutUs.data);
 
-    thisProduct.element = utils.createDOMFromHTML(generatedHTML);
+    thisAboutUs.element = utils.createDOMFromHTML(generatedHTML);
 
     const aboutUsContainer = document.querySelector(select.containerOf.aboutUs);
 
-    aboutUsContainer.appendChild(thisProduct.element);
+    aboutUsContainer.appendChild(thisAboutUs.element);
   }
 }
 
