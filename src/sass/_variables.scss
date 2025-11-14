@@ -18,20 +18,20 @@ $letter-spacing-lg: 0.3rem;
 $letter-spacing-xlg: 0.7rem;
 
 @mixin flex($direction: row, $justify: center, $align: center, $gap: null) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-    @if $gap != null {
-      gap: $gap;
-    }
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  @if $gap != null {
+    gap: $gap;
   }
+}
 
-  @mixin section-bg($image, $overlay: rgba(0, 0, 0, 0.6)) {
-    background: linear-gradient($overlay, $overlay), url($image);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    position: relative;
-  }
+@mixin section-bg($image, $overlay: rgba(0, 0, 0, 0.6)) {
+  background: linear-gradient($overlay, $overlay), url($image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+}
