@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-      rel="stylesheet">
-    <link rel="stylesheet" href="./vendor/fontello/css/fontello.css">
-    <link rel="stylesheet" href="css/style.css">
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./vendor/fontello/css/fontello.css" />
+    <link
+      rel="stylesheet"
+      href="./vendor/flickity/flickity.min.css"
+      media="screen"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <title>El Tigre</title>
   </head>
   <body>
@@ -27,8 +33,7 @@
           </nav>
         </div>
       </div>
-      <div class="header__hero">
-      </div>
+      <div class="header__hero"></div>
       <div class="header__discover">
         <span class="header__discover-subtext">DISCOVER</span>
         <i class="icon-arrow-down"></i>
@@ -65,8 +70,8 @@
       <small>&copy; 2021 EL TIGRE Inc.</small>
     </footer>
     <script id="template-main-text" type="text/x-handlebars-template">
-        <span class="header__hero-main">{{breakLine mainText}}</span>
-        <span class="line"></span>
+      <span class='header__hero-main'>{{breakLine mainText}}</span>
+      <span class='line'></span>
     </script>
     <script id="template-menu-product" type="text/x-handlebars-template">
       <article class='product'>
@@ -89,9 +94,9 @@
         </div>
         <div class='product__image'>
           <img src='{{image}}' alt='{{title}}' />
-          <div class="corner">
-            <span class="old">{{oldPrice}}$</span>
-            <span class="new">{{newPrice}}$</span>
+          <div class='corner'>
+            <span class='old'>{{oldPrice}}$</span>
+            <span class='new'>{{newPrice}}$</span>
           </div>
         </div>
       </article>
@@ -103,20 +108,47 @@
             <span>ABOUT US</span>
             <span class='line'></span>
           </div>
-          <div class='about-us__information'>
-            <p>
-              Who are we? Just a bunch of friend with
-              <br />
-              a love for a good coffee and desire to create
-              <br />
-              something new, something original.
-            </p>
-            <p>
-              Our coffees reflect us - young, wild and free.<br />
-              We are on the journey of new tastes...
-            </p>
+          <div class='about-us__carousel'>
+            <div class='carousel-cell'><div class='carousel-cell-image'><img
+                  src='./images/about-us/3.png'
+                  alt=''
+                /></div>
+              <div class='carousel-cell-text'><p
+                  class='carousel-cell-text-header'
+                >Elizabeth
+                  <span class='bold-text'>Doherty</span></p><p
+                  class='carousel-cell-text-description'
+                >Experienced barista from Bahamas. She says that Venezuela has
+                  opened her eyes on coffee. " It's not about the taste" she
+                  says. "It's about the feelings".</p></div></div>
+            <div class='carousel-cell'><div class='carousel-cell-image'><img
+                  src='./images/about-us/2.png'
+                  alt=''
+                /></div>
+              <div class='carousel-cell-text'><p
+                  class='carousel-cell-text-header'
+                >Max
+                  <span class='bold-text'>Selfish</span></p><p
+                  class='carousel-cell-text-description'
+                >Max is the austrian barista with years of experience from the
+                  hotels across the whole Europe. "Venezuela coffee was a
+                  lightening experience for me! I have never drink such an
+                  amazing coffee!", he says.</p></div></div>
+            <div class='carousel-cell'><div class='carousel-cell-image'><img
+                  src='./images/about-us/1.png'
+                  alt=''
+                /></div>
+              <div class='carousel-cell-text'><p
+                  class='carousel-cell-text-header'
+                >
+                  Ping
+                  <span class='bold-text'>Nihao</span></p><p
+                  class='carousel-cell-text-description'
+                >Ping is the youngest in the team. He doesn't like calling
+                  coffee a mysterious act. He says, a good coffee is like a
+                  mathematical formula. Once you figured it our, every coffee
+                  you make is a masterpiece.</p></div></div>
           </div>
-          <span class='about-us__join-us'>Join us!</span>
         </div>
       </article>
     </script>
@@ -141,6 +173,7 @@
       </article>
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+    <script src="./vendor/flickity/flickity.min.js"></script>
     <script type="module" src="js/app.js"></script>
   </body>
 </html>

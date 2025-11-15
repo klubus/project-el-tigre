@@ -5,6 +5,7 @@ class AboutUs {
   constructor(data = {}) {
     const thisAboutUs = this;
     thisAboutUs.data = data;
+    this.flkty = null;
     thisAboutUs.render();
   }
 
@@ -18,6 +19,19 @@ class AboutUs {
     const aboutUsContainer = document.querySelector(select.containerOf.aboutUs);
 
     aboutUsContainer.appendChild(thisAboutUs.element);
+
+    const elem = this.element.querySelector('.about-us__carousel');
+    if (elem) {
+      this.flkty = new window.Flickity(elem, {
+        cellAlign: 'center',
+        contain: true,
+        wrapAround: true,
+        autoPlay: 5000,
+        imagesLoaded: true,
+        pageDots: false,
+        prevNextButtons: false,
+      });
+    }
   }
 }
 

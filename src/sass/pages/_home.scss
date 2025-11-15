@@ -19,16 +19,36 @@
   letter-spacing: $letter-spacing-lg;
 }
 
-.about-us__information {
-  @include flex(column, center, center);
-  font-style: italic;
-  font-size: $font-size-md;
-}
+.about-us__carousel {
+  width: 100%;
+  margin: 2rem;
 
-.about-us__join-us {
-  @include flex(row, flex-end, center);
-  max-width: 600px;
-  padding-right: 3rem;
-  font-style: italic;
-  font-size: $font-size-md;
+  .carousel-cell {
+    @include flex(row, center, center);
+    width: 100%;
+  }
+
+  .carousel-cell img,
+  .carousel-cell-text {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .carousel-cell img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .carousel-cell-text {
+    padding: 1rem;
+    .carousel-cell-text-header {
+      font-size: $font-size-lg;
+    }
+    .carousel-cell-text-description {
+      font-size: $font-size-normal;
+      font-style: italic;
+      font-weight: $font-semibold;
+    }
+  }
 }
